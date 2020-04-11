@@ -17,3 +17,5 @@ Big O notation:
 
 Linear search - O(n)
 ```
+
+[Linear Search Code](https://github.com/tareq97/assignment/blob/master/Linear/Linear.java)
