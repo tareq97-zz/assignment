@@ -28,3 +28,4 @@ Binary search - O(log n)
 ```
 
 [Binary Search Code](https://github.com/tareq97/assignment/blob/master/Binary/Binary.java)
+[Binary Search With Random Sorted Array between range 0 to 1000](https://github.com/tareq97/assignment/blob/master/Binary/BinarySearchRandom.java)
