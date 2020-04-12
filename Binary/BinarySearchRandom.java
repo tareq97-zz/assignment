@@ -26,11 +26,11 @@ public class BinarySearchRandom{
 	private static Random rand = new Random();
 
 	public static int[] generateSorted(final int length, final int minVal, final int maxVal) {
-   			int span = maxVal - minVal + 1;
-   			int[] accumulator = new int[span];
-   			for(int genIdx = 0; genIdx < length; genIdx++) {
+   		int span = maxVal - minVal + 1;
+   		int[] accumulator = new int[span];
+   		for(int genIdx = 0; genIdx < length; genIdx++) {
       		accumulator[rand.nextInt(span)]++;
-      		System.out.println()
+      		
 	   	}
    		int resultIdx = 0;
    		int[] result = new int[length];
@@ -39,12 +39,15 @@ public class BinarySearchRandom{
          		result[resultIdx++] = accIdx + minVal;
     	  	}
    		}
+
    		return result;
 	}
 
 	public static void main(String[] args) throws IOException {
-		int[] arr = generateSorted(1000, 0, 1000);
-			
+		int[] arr = generateSorted(1000, 1, 1000);
+		for (int i=0; i<arr.length; i++) {
+			System.out.println(arr[i]);			
+		}
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("The element to print in the array: ");
 		int x = Integer.parseInt(reader.readLine());
