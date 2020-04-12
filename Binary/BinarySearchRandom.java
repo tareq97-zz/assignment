@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
+import java.lang.*; 
 
 public class BinarySearchRandom{
 
@@ -44,18 +45,29 @@ public class BinarySearchRandom{
 	}
 
 	public static void main(String[] args) throws IOException {
+
 		int[] arr = generateSorted(1000, 1, 1000);
 		for (int i=0; i<arr.length; i++) {
 			System.out.println(arr[i]);			
 		}
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("The element to print in the array: ");
-		int x = Integer.parseInt(reader.readLine());
+
+		while(true){		
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("The element to print in the array: ");
+			int x = Integer.parseInt(reader.readLine());
 		
-    	int n = arr.length - 1; 
-    	Binary binary = new Binary();
-    	boolean result = binary.BinarySearch(arr, 0, n ,x);
-    	if(result == false)System.out.println("Element is not present in array");
-        else System.out.println("Element is present in the array "); 
+    		int n = arr.length - 1; 
+    		Binary binary = new Binary();
+    		boolean result = binary.BinarySearch(arr, 0, n ,x);
+    		if(result == false)System.out.println("Element is not present in array");
+        	else System.out.println("Element is present in the array ");
+
+        	System.out.println("Do you want to continue Y/N");
+        	String exit = reader.readLine();
+        	exit = exit.trim();
+			if(exit.equalsIgnoreCase("Y")){continue;}
+			else {break;}
+		
+        } 
 	}
 }
